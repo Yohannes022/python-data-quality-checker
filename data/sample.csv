@@ -1,0 +1,12 @@
+
+employee_id,name,age,salary,department,country
+1,Abebe,25,5000,Engineering,Ethiopia
+2,Marta,30,6500,Finance,Ethiopia
+3,Samuel,28,5500,Engineering,Ethiopia
+4,Hana,35,7200,Marketing,Ethiopia
+5,Daniel,,6000,Finance,Ethiopia
+6,Rahel,27,,Engineering,Ethiopia
+7,Abebe,25,5000,Engineering,Ethiopia
+8,Meron,32,6800,Marketing,Ethiopia
+9,Kebede,45,200000,Finance,Ethiopia
+10,Selam,29,5800,Engineering,Ethiopia
