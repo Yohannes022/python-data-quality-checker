@@ -1,22 +1,17 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
 # Virtual environments
 .venv/
 venv/
 env/
 
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# Testing and coverage
+# Testing
 .pytest_cache/
 .coverage
 htmlcov/
@@ -28,7 +23,8 @@ htmlcov/
 # Operating system
 .DS_Store
 
-# Build files
-build/
-dist/
-*.egg-info/
+# Generated reports
+reports/*.json
+
+# Generated cleaned datasets
+data/*_cleaned.csv
