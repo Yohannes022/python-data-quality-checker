@@ -2,10 +2,10 @@
 import pandas as pd
 import pytest
 
-from data_quality_checker.loader import load_csv
+from data_quality_checker.loader import load_data
 
 
-def test_load_csv(tmp_path):
+def test_load_data(tmp_path):
 
     file_path = tmp_path / "sample.csv"
 
@@ -14,7 +14,7 @@ def test_load_csv(tmp_path):
         encoding="utf-8"
     )
 
-    df = load_csv(file_path)
+    df = load_data(file_path)
 
     assert isinstance(df, pd.DataFrame)
     assert df.shape == (2, 2)
@@ -24,7 +24,7 @@ def test_load_csv(tmp_path):
 def test_file_not_found():
 
     with pytest.raises(FileNotFoundError):
-        load_csv("nonexistent.csv")
+        load_data("nonexistent.csv")
 
 
 def test_empty_csv(tmp_path):
@@ -33,4 +33,4 @@ def test_empty_csv(tmp_path):
     file_path.write_text("", encoding="utf-8")
 
     with pytest.raises(ValueError):
-        load_csv(file_path)
+        load_data(file_path)

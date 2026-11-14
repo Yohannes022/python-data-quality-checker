@@ -37,7 +37,7 @@ def generate_report(
 	)
 
 	with output_path.open(
-		"W",
+		"w",
 		encoding="utf-8"
 	) as file:
 		json.dump(

@@ -6,10 +6,11 @@ Command-line Interface for Data Quality Checker.
 
 """Command-line interface for Data Quality Checker."""
 
+# import pandas as pd
 import argparse
-import pandas as pd
+from pathlib import Path
 
-from .loader import load_csv
+from .loader import load_data
 from .profiler import profile_dataset
 from .detectors import detect_outliers
 from .reporter import generate_report
@@ -55,7 +56,7 @@ def main():
 
     try:
         # Load dataset
-        df = load_csv(args.file)
+        df = load_data(args.file)
 
         print("\nDATASET LOADED SUCCESSFULLY")
         print("-" * 40)
@@ -121,11 +122,22 @@ def main():
             if args.drop_missing:
                 cleaned_df = cleaned_df.dropna()
 
-            clean_path = args.clean_output
+            # clean_path = args.clean_output
+
+            # cleaned_df.to_csv(
+            #     clean_path,
+            #     index=False
+            # )
+            clean_path = Path(args.clean_output)
+
+            clean_path.parent.mkdir(
+               parents=True,
+               exist_ok=True
+            )
 
             cleaned_df.to_csv(
-                clean_path,
-                index=False
+               clean_path,
+               index=False
             )
 
             print("\nCLEANED DATASET SAVED")

@@ -1,0 +1,9 @@
+employee_id,name,age,salary,department,country
+1,Abebe,25.0,5000.0,Engineering,Ethiopia
+2,Marta,30.0,6500.0,Finance,Ethiopia
+3,Samuel,28.0,5500.0,Engineering,Ethiopia
+4,Hana,35.0,7200.0,Marketing,Ethiopia
+7,Abebe,25.0,5000.0,Engineering,Ethiopia
+8,Meron,32.0,6800.0,Marketing,Ethiopia
+9,Kebede,45.0,200000.0,Finance,Ethiopia
+10,Selam,29.0,5800.0,Engineering,Ethiopia
